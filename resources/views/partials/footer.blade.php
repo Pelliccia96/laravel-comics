@@ -5,17 +5,21 @@
                 <ul>
                     <li class="list-item">
                         <h4>DC Comics</h4>
+                        @foreach ($footerArray[0] as $footerElement)
                         <div>
-                            <a href="#">"Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"</a>
+                            <a href="#">{{ $footerElement }}</a>
                         </div>
+                        @endforeach
                     </li>
                 </ul>
                 <ul>
                     <li class="list-item">
                         <h4>Shop</h4>
+                        @foreach ($footerArray[1] as $footerElement)
                         <div>
-                            <a href="#">"Shop Dc", "Shop Dc Collectibles"</a>
+                            <a href="#">{{ $footerElement }}</a>
                         </div>
+                        @endforeach
                     </li>
                 </ul>
             </div>
@@ -23,24 +27,31 @@
                 <ul>
                     <li class="list-item">
                         <h4>DC</h4>
+                        @foreach ($footerArray[2] as $footerElement)
                         <div>
-                            <a href="#">"Term Of Use", "Privacy policy (New)", "Ad Choise", "Adversting", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificateds", "Rating", "Shop Help", "Contact Us"</a>
+                            <a href="#">{{ $footerElement }}</a>
                         </div>
+                        @endforeach
                     </li>
                 </ul>
                 <ul>
                     <li class="list-item">
                         <h4>Sites</h4>
+                        @foreach ($footerArray[3] as $footerElement)
                         <div>
-                            <a href="#">"DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"</a>
+                            <a href="#">{{ $footerElement }}</a>
                         </div>
+                        @endforeach
                     </li>
                 </ul>
             </div>
             <!-- Footer DC Logo bg -->
             <div class="footer-logo-bg">
-                <img src="{{ Vite::asset('resources/img/dc-logo-bg.png') }}" alt="DC Logo in background">
+                <img src="{{ Vite::asset('resources/img/dc-logo-bg.png') }}" alt="">
             </div>
+        </div>
+        <div class="text-secondary ps-4 mt-2">
+            <small> Sites Content TM and c 2020 DC Entertainment, unless otherwise <a href="#" class="text-primary">noted here</a>. All rights reserved. <br><a href="#" class="text-primary">Cookies Settings</a></small>
         </div>
     </div>
     <section class="bg-dark">
