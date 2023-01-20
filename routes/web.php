@@ -3,5 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $title = "Laravel Comics";
+    return view('index', [
+        "title" => $title,
+    ]);
+})->name("home");
