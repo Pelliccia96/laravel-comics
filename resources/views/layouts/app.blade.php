@@ -10,10 +10,15 @@
     @vite('resources/js/app.js')
 </head>
 <body class="bg-dark">
-    <div class="container text-white my-5 border rounded py-5">
-        <div class="text-center pb-5">
-            <h1 class="mb-5">{{ $title }}</h1>
-        </div>
-    </div>
+
+        {{-- header --}}
+        @include('partials.header')
+
+        {{-- placeorder main --}}
+        @yield('content')
+
+        {{-- footer --}}
+        @include('partials.footer')
+
 </body>
 </html>
