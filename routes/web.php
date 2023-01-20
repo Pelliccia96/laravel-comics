@@ -11,9 +11,11 @@ Route::get('/', function () {
         ["Term Of Use", "Privacy policy (New)", "Ad Choise", "Adversting", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificateds", "Rating", "Shop Help", "Contact Us"],
         ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
     ];
+    $comicsArray = config('comics');
 
     return view('index', [
         "headerArray" => $headerArray,
         "footerArray" => $footerArray,
+        "comicsArray" => $comicsArray,
     ]);
 })->name("home");
