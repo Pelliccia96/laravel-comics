@@ -11,16 +11,9 @@
                 </div>
                 <div class="nav-list">
                     <ul class="d-flex gap-4 fw-bold">
-                        <li class="list-item"><a href="#" class="text-dark">CHARACTERS</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">COMICS</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">MOVIES</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">TV</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">GAMES</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">COLLECTIBLES</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">VIDEOS</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">FANS</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">NEWS</a></li>
-                        <li class="list-item"><a href="#" class="text-dark">SHOP</a></li>
+                        @foreach ($headerArray as $headerElement)
+                            <li class="list-item"><a href="#" class="text-dark">{{ $headerElement }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div>
