@@ -15,13 +15,13 @@
     <!-- Main Section -->
     <div class="container py-5">
         <div class="text-dark my-3">
-            <h2 class="fw-semibold">ACTION COMICS #1000: THE DELUXE EDITION</h2>
+            <h2 class="fw-semibold">{{$comicsArray[0]["title"]}}</h2>
         </div>
         <div class="d-flex">
             <div>
                 <div class="my-4 d-flex">
                     <button class="btn btn-success border border-2 border-success p-2 pb-1 d-flex justify-content-between w-50">
-                        <h5 class="text-white px-2">U.S. Price: $19.99</h5>
+                        <h5 class="text-white px-2">U.S. Price: {{$comicsArray[0]["price"]}}</h5>
                         <h5 class="text-white px-2">AVAILABLE</h5>
                     </button>
                     <button class="btn btn-success border border-2 border-success p-2 pb-1">
@@ -29,7 +29,7 @@
                     </button>
                 </div>
                 <div>
-                    <p class="fw-semibold">The celebration of 1,000 issues of Action Comics continues with a new, Deluxe Edition of the amazing comic that won raves when it hit comics shops in April! This hardcover includes all the stories from that issue, plus the tale by writer Paul Levitz and artist Neal Adams that appeared in the Action Comics: 80 Years Of Superman hardcover, as well as all the variant covers, design sketches by Jim Lee for superman's new look, scripts for the stories, the original art from the last story featuring art by Curt Swan and more! Plus: a complete reprint of the stories that started it all-the Superman stories Action Comics #1 and 2 from 1938!</p>
+                    <p class="fw-semibold">{{$comicsArray[0]["description"]}}</p>
                 </div>
             </div>
             <div>
@@ -37,7 +37,7 @@
                     <h6 class="fw-semibold">ADVERTISEMENT</h6>
                 </div>
                 <div>
-                    <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" class="img-fluid" alt="">
+                    <img src="{{$comicsArray[0]["thumb"]}}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -49,50 +49,28 @@
         <div class="text-white d-flex gap-4">
             <div>
                 <h4 class="p-3">Talent</h4>
-                <ul>
-                    <li class="list-item">
-                        <h6>Art by:</h6>
-                        <div>
-                            <a href="#">
-                                "José Luis García-López",
-                                "Clay Mann",
-                                "Rafael Albuquerque",
-                                "Patrick Gleason",
-                                "Dan Jurgens",
-                                <br>
-                                "Joe Shuster",
-                                "Neal Adams",
-                                "Curt Swan",
-                                "John Cassaday",
-                                "Olivier Coipel",
-                                "Jim Lee"
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="list-item">
-                        <h6>Written by:</h6>
-                        <div>
-                            <a href="#">
-                                "Brad Meltzer",
-                                "Tom King",
-                                "Scott Snyder",
-                                "Geoff Johns",
-                                "Brian Michael Bendis",
-                                "Paul Dini",
-                                <br>
-                                "Louise Simonson",
-                                "Richard Donner",
-                                "Marv Wolfman",
-                                "Peter J. Tomasi",
-                                "Dan Jurgens",
-                                "Jerry Siegel",
-                                "Paul Levitz"
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                <div class="d-flex">
+                    <ul>
+                        <li class="list-item">
+                            <h6>Art by:</h6>
+                            @foreach ($comicsArray[0]["artists"] as $comicsElement)
+                            <div>
+                                <a href="#">{{$comicsElement}}</a>
+                            </div>
+                            @endforeach
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="list-item">
+                            <h6>Written by:</h6>
+                            @foreach ($comicsArray[0]["writers"] as $comicsElement)
+                            <div>
+                                <a href="#">{{$comicsElement}}</a>
+                            </div>
+                            @endforeach
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <h4 class="p-3">Specs</h4>
@@ -100,7 +78,7 @@
                     <li class="list-item">
                         <h6>Series:</h6>
                         <div>
-                            <a href="#">ACTION COMICS</a>
+                            <a href="#">{{$comicsArray[0]["series"]}}</a>
                         </div>
                     </li>
                 </ul>
@@ -108,7 +86,7 @@
                     <li class="list-item">
                         <h6>U.S. Price:</h6>
                         <div>
-                            <a href="#">$19.99</a>
+                            <a href="#">{{$comicsArray[0]["price"]}}</a>
                         </div>
                     </li>
                 </ul>
@@ -116,7 +94,7 @@
                     <li class="list-item">
                         <h6>On Sale Date:</h6>
                         <div>
-                            <a href="#">Oct 02 2018</a>
+                            <a href="#">{{$comicsArray[0]["sale_date"]}}</a>
                         </div>
                     </li>
                 </ul>
