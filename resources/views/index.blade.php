@@ -35,7 +35,7 @@
                     <div class="img-container">
                         <img src="{{ Vite::asset($item["img"]) }}" class="img-fluid my-main-img">
                     </div>
-                    <div><a href="#" class="text-white fw-semibold">{{ $item["title"] }}</a></div>
+                    <div class="me-5"><a href="#" class="text-white fw-semibold">{{ $item["title"] }}</a></div>
                     @endforeach
                 </div>
             </div>

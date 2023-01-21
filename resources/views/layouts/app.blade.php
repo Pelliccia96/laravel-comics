@@ -16,6 +16,7 @@
 
         {{-- placeorder main --}}
         @yield('content')
+        @yield('news')
 
         {{-- footer --}}
         @include('partials.footer')

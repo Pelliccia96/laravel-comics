@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="text-secondary ps-4 mt-2">
-            <small> Sites Content TM and c 2020 DC Entertainment, unless otherwise <a href="#" class="text-primary">noted here</a>. All rights reserved. <br><a href="#" class="text-primary">Cookies Settings</a></small>
+            <small> Sites Content TM and &#xA9; 2020 DC Entertainment, unless otherwise <a href="#" class="text-primary">noted here</a>. All rights reserved. <br><a href="#" class="text-primary">Cookies Settings</a></small>
         </div>
     </div>
     <section class="bg-dark">
