@@ -63,11 +63,9 @@
             </div>
             <div class="d-flex justify-content-center align-items-center gap-3">
                 <div><a href=""><h5 class="text-primary fw-bold">FOLLOW US</h5></a></div>
-                <div><a href="#"><img src="{{ Vite::asset('resources/img/footer-facebook.png') }}"></a></div>
-                <div><a href="#"><img src="{{ Vite::asset('resources/img/footer-twitter.png') }}"></a></div>
-                <div><a href="#"><img src="{{ Vite::asset('resources/img/footer-youtube.png') }}"></a></div>
-                <div><a href="#"><img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}"></a></div>
-                <div><a href="#"><img src="{{ Vite::asset('resources/img/footer-periscope.png') }}"></a></div>
+                @foreach ($footerImgs as $img)
+                <div><a href="#"><img src="{{ Vite::asset($img) }}"></a></div>
+                @endforeach
             </div>
         </div>
     </section>
